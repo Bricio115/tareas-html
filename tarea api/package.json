@@ -1,0 +1,9 @@
+{
+  "name": "portal-autos",
+  "version": "1.0.0",
+  "description": "Portal web que consume la API pública NHTSA vPIC (información de autos)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

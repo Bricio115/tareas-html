@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Autos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🚗 Portal de Autos</h1>
+    <p>Datos de la API pública NHTSA vPIC</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Buscar modelos por marca y año</h2>
+      <form id="form-modelos">
+        <input type="text" id="marca" list="lista-marcas" placeholder="Marca (ej. TOYOTA)" required>
+        <datalist id="lista-marcas"></datalist>
+        <input type="number" id="anio" min="1980" max="2030" value="2020" required>
+        <button type="submit">Buscar</button>
+      </form>
+      <p id="estado-modelos" class="estado"></p>
+      <ul id="modelos" class="grid"></ul>
+    </section>
+
+    <section class="panel">
+      <h2>Decodificar VIN</h2>
+      <form id="form-vin">
+        <input type="text" id="vin" maxlength="17" placeholder="VIN de 17 caracteres" value="1HGCM82633A004352" required>
+        <button type="submit">Decodificar</button>
+      </form>
+      <p id="estado-vin" class="estado"></p>
+      <table id="resultado-vin"></table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
